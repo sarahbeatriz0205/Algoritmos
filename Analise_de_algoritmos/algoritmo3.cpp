@@ -1,5 +1,6 @@
 // Algoritmo 3 implementado - Questão 5
 
+#include <chrono>
 #include <iostream>
 using namespace std;
 
