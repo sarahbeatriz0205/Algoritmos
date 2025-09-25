@@ -150,3 +150,13 @@ Saída: verdadeiro se n for primo. falso caso contrário.
   retorne q_divs = 1
 ```
 
+| Testes | Tempo em milissegundos |
+| :--------------------: | :-----: |
+| 240000029  | 474 ms     |
+| 480000077 | 917 ms  | 
+| 720000103 | 1389 ms |
+| 960000131 | 1863 ms |
+| 1200000133 |  2295 ms |
+|1440000137 | 2932 ms |
+|1680000149 | 3280 ms |
+|1920000161 | 3752 ms |
