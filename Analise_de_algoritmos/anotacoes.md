@@ -10,6 +10,12 @@
 
 ## Análise teórica - Contagem de operações
 - Quantidade de operações irá definir a eficiência do algoritmo;
+### Exemplos de Operações primitivas para a contagem:
+- Avaliar uma expressão;
+- Atribuição;
+- Pegar elemento de um índice no array;
+- Chamar um método/função;
+- Retorno de uma função/método;
 ```
 # Exemplo: Maior elemento de um array
 
