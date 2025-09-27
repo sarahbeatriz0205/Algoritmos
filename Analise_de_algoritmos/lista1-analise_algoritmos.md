@@ -1,8 +1,32 @@
 ## Lista de Exercícios - Análise de Algoritmos
+### Aluno(a): Sarah Beatriz Barbosa do Nascimento
 #### Questão 1:
-a) Levando em consideração os tamanhos de n = 1 até n = 120, conclui-se que de n = 1 até n = 54, a equação A é melhor que a equação B. A partir de n = 55, a equação B é melhor que a equação A.
+a) Levando em consideração os tamanhos de n = 1 até n = 120, conclui-se que de n = 1 até n = 54, a equação A é melhor que a equação B, e a partir de n = 55, a equação B é melhor que a equação A.
 
 b) *Fazer um gráfico*
+
+#### Questão 2:
+Com base na tabela de dados inseridos abaixo e considerando sempre o **pior caso**, a classíficação entre os algoritmos é a seguinte:
+ | Classificação | Algoritmo |
+| :-----------: | :-------------: |
+| 1º | Algoritmo D (o mais rápido) |
+| 2º | Algoritmo B |
+| 3º | Algoritmo C |
+| 4º | Algoritmo A (o mais lento) | 
+
+##### Tabela de dados
+
+|  Entrada | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 |
+| :-------:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Algoritmo a | 9 | 7 | 5.78 | 6 | 10.24 | 26.4 | 79.5 | 250 | 800.13 | 2.611.44 |
+| Algoritmo b | 470 | 490 | 510 | 530 | 550 | 570 | 590 | 610 | 630 | 650 |
+| Algoritmo c | 20 | 46 | 88 | 146 | 220 | 310 | 416 | 538 | 676 | 830 |
+| Algoritmo d | 520 | 540 | 551.7 | 560 | 566.44 | 571.7 | 576.15| 580 | 583.40 | 586.44|
+
+
+b) Gráfico com as 4 equações
+
+<img width="700" height="513" alt="Captura de tela 2025-09-27 123154" src="https://github.com/user-attachments/assets/82e7defa-a0a3-48d2-814c-e0405d20b363" />
 
 
 #### Questão 3:
