@@ -6,7 +6,7 @@ using namespace std;
 
 bool primo(int n){
     int div = 0;
-    for (int i = 2; i <= n; ++i){
+    for (int i = 1; i <= n; ++i){
         if (n % i == 0){
             div = div + 1;
         }
