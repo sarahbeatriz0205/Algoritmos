@@ -1,13 +1,10 @@
-// Algoritmo 1 implementado
-
 #include <chrono>
 #include <iostream>
-using namespace std;
 
-bool primo(int n){
+bool primo(long long n){
     int div = 0;
-    for (int i = 1; i <= n; ++i){
-        if (n % i == 0){
+    for (long long i = 1; i <= n; ++i){
+        if (n % i == 0) {
             div = div + 1;
         }
     }
@@ -20,8 +17,8 @@ bool primo(int n){
 }
 
 int main(){
-    int n;
-    cin >> n;
+    long long n;
+    std::cin >> n;
     // Início do cronômetro
     auto beg = std::chrono::high_resolution_clock::now();
     bool p = primo(n);
@@ -40,3 +37,5 @@ int main(){
         << duration.count() << " ms "<< std::endl;
     return 0;
 }
+
+// problema de Floating point: era apenas o tamanho do número e o tipo do dado (long long)
