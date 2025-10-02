@@ -9,10 +9,10 @@ b) *Fazer um gráfico*
 Com base na tabela de dados inseridos abaixo e considerando sempre o **pior caso**, a classíficação entre os algoritmos é a seguinte:
  | Classificação | Algoritmo |
 | :-----------: | :-------------: |
-| 1º | Algoritmo D (o mais rápido) |
+| 1º | Algoritmo D (o mais rápido; o que cresce mais devagar) |
 | 2º | Algoritmo B |
 | 3º | Algoritmo C |
-| 4º | Algoritmo A (o mais lento) | 
+| 4º | Algoritmo A (o mais lento; o que cresce mais rápido) | 
 
 ##### Tabela de dados
 
@@ -37,20 +37,17 @@ Saída: verdadeiro se n for primo. falso caso contrário.
 Inicio
   divs ← 0 --------------------------------> 1
   para i ← 1 até n faça -------------------> 2n
-    se n mod i = 0 então ------------------> 2(n-1) = 2n -2
-      divs ← divs + 1 ---------------------> 2(n-1) = 2n-2
+    se n mod i = 0 então ------------------> 2n
+      divs ← divs + 1 ---------------------> 2n (no pior caso)
     fim se
-  fim para --------------------------------> 2(n-1) 2n-2
+  fim para --------------------------------> 2n
   se divs = 2 então -----------------------> 1
     retorne verdadeiro --------------------> 1
   senão 
     retorne falso
   fim se
 ```
-- 2(n-1) + 2(n-1) + 2(n-1) = 2n-2 + 2n-2 + 2n-2
-- 1 + 2n + 2n - 2 + 2n - 2 + 2n - 2 + 1 + 1 = 1 + 8n -2 - 2 - 2 + 1 + 1 + 1
-- 8n - 6 + 3
-- 8n - 3
+Equação: 6n + 3 --------> usar na questão 4
 
 #### Questão 4:
 ~~~c++
@@ -150,9 +147,8 @@ Saída: verdadeiro se n for primo. falso caso contrário.
     retorne falso
   fim se
 ```
-
+Equação Algoritmo 3: ?
 ```
-# Dúvida para amanhã: se n = 1 for verdadeiro, na teoria, ele para. eu devo contar até com esse n = 1?
 # Algoritmo 3
 Entrada: n ∈ N+
 Saída: verdadeiro se n for primo. falso caso contrário.
@@ -193,26 +189,26 @@ Saída: verdadeiro se n for primo. falso caso contrário.
 3600000269 | 7949 ms | 3987 ms | 4045 ms
 3840000289 | 8492 ms | 4314 ms | 4279 ms 
 4080000293 |  9038 ms | 4520 ms | 4510 ms
-4320000329 | 9528 ms | 4824 ms 
-4560000343 | 10093 ms | 5099 ms
-4800000347 | 10703 ms | 5356 ms 
-5040000443 | 11205 ms |  5558 ms 
-5280000461 |  11749 ms | 5855 ms 
-5520000463 | 12235 ms |  6165 ms 
-5760000473 | 12740 ms | 6364 ms
-6000000511 | 13269 ms | 6658 ms 
-6240000581 | 13795 ms | 6947 ms
-6480000589 | 14328 ms | 7171 ms 
-6720000593 | 14825 ms | 7496 ms 
-6960000613 | 15354 ms | 7731 ms
-7200000623 | 16449 ms | 7952 ms 
-7680000703 | 16997 ms | 8574 ms 
-7920000707 |  17571 ms |  8775 ms 
-8160000721 | 18292 ms | 9044 ms
-8400000727 | 18603 ms | 9311 ms 
-8640000749 |  19138 ms | 9592 ms
-8880000757 | 19637 ms | 9852 ms 
-9120000809 | 20161 ms | 10166 ms
-9360000827 | 20777 ms | 10379 ms
-9600000833 | 21203 ms | 10660 ms | 
+4320000329 | 9528 ms | 4824 ms |  4836 ms 
+4560000343 | 10093 ms | 5099 ms | 5088 ms
+4800000347 | 10703 ms | 5356 ms | 5345 ms
+5040000443 | 11205 ms |  5558 ms |  5592 ms 
+5280000461 |  11749 ms | 5855 ms | 5834 ms 
+5520000463 | 12235 ms |  6165 ms | 6142 ms
+5760000473 | 12740 ms | 6364 ms | 6412 ms 
+6000000511 | 13269 ms | 6658 ms | 6684 ms
+6240000581 | 13795 ms | 6947 ms | 6931 ms 
+6480000589 | 14328 ms | 7171 ms | 7196 ms 
+6720000593 | 14825 ms | 7496 ms | 7476 ms 
+6960000613 | 15354 ms | 7731 ms | 7768 ms
+7200000623 | 16449 ms | 7952 ms | 7951 ms
+7680000703 | 16997 ms | 8574 ms | 8528 ms
+7920000707 |  17571 ms |  8775 ms | 8811 ms
+8160000721 | 18292 ms | 9044 ms | 9052 ms
+8400000727 | 18603 ms | 9311 ms | 9339 ms 
+8640000749 |  19138 ms | 9592 ms | 9613 ms
+8880000757 | 19637 ms | 9852 ms | 9883 ms 
+9120000809 | 20161 ms | 10166 ms | 10126 ms
+9360000827 | 20777 ms | 10379 ms | 10487 ms
+9600000833 | 21203 ms | 10660 ms | 10628 ms 
 9840000869 | 21747 ms | 10902 ms | 10991 ms
