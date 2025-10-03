@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-bool primo(int n){
+bool primo(long long n){
     if (n == 1){
         return false;
     }
@@ -17,7 +17,7 @@ bool primo(int n){
     bool p = true;
     int d = 3;
 
-    while (p <= (n / 2) and d <= (n / 2)){
+    while (p and d <= (n / 2)){
         if (n % d == 0){
             p = false;
         }
@@ -27,9 +27,22 @@ bool primo(int n){
 }
 
 int main(){
-    int n;
+    long long n;
     cin >> n;
-    int x = primo(n);
-    cout << x << endl;
+    auto beg = std::chrono::high_resolution_clock::now();
+    bool p = primo(n);
+
+    // Fim
+    auto end = std::chrono::high_resolution_clock::now();
+
+    if (p)
+        std::cout << n << " é primo :) " << std::endl;
+    else
+        std::cout << n << " não é primo :( " << std::endl;
+
+    auto dur = end - beg; // Duração do cronômetro
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(dur);
+    std::cerr << n << " Processing time: "
+        << duration.count() << " ms "<< std::endl;
     return 0;
 }

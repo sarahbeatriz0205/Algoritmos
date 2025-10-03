@@ -3,7 +3,10 @@
 #### Questão 1:
 a) Levando em consideração os tamanhos de n = 1 até n = 120, conclui-se que de n = 1 até n = 54, a equação A é melhor que a equação B, e a partir de n = 55, a equação B é melhor que a equação A.
 
-b) *Fazer um gráfico*
+b) 
+
+<img src="Captura de tela 2025-10-03 164528-2.png">
+
 
 #### Questão 2:
 Com base na tabela de dados inseridos abaixo e considerando sempre o **pior caso**, a classíficação entre os algoritmos é a seguinte:
@@ -80,7 +83,7 @@ int main() {
 
     auto dur = end - beg; // Duração do cronômetro
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(dur);
-    std::cerr << n << " Processing time: "
+    std::cerr << n << " | "
         << duration.count() << " ms "<< std::endl;
     return 0;
 
@@ -212,3 +215,51 @@ Saída: verdadeiro se n for primo. falso caso contrário.
 9360000827 | 20777 ms | 10379 ms | 10487 ms
 9600000833 | 21203 ms | 10660 ms | 10628 ms 
 9840000869 | 21747 ms | 10902 ms | 10991 ms
+
+#### Questão 6:
+
+| Testes | Algo 1 | Algo 2 | Algo 3 | Algo 4 |
+| :--------------------: | :-----: | :--------: | :-------: | :-------: |
+2400000167 | 5481 ms | 2682 ms | 2691 ms
+2640000217 | 5822 ms | 2927 ms | 2923 ms
+2880000251 | 6442 ms | 3192 ms | 3431 ms 
+3120000253 | 6939 ms | 3521 ms | 3509 ms 
+3360000257 | 7404 ms | 3701 ms | 3741 ms
+3600000269 | 8004 ms | 3974 ms|  4045 ms
+3840000289 | 8524 ms | 4304 ms | 4345 ms 
+4080000293 | 9059 ms | 4503 ms |4517 ms
+4320000329 | 9622 ms | 4812 ms| 4811 ms 
+4560000343 | 10115 ms | 5084 ms| 5163 ms 
+4800000347 | 10684 ms | 5352 ms| 5453 ms
+5040000443 | 11149 ms | 5590 ms| 5618 ms 
+5280000461 | 11726 ms | 5898 ms | 6083 ms 
+5520000463 | 12188 ms | 6159 ms| 6249 ms
+5760000473 | 12789 ms | 6360 ms | 6373 ms
+6000000511 | 13327 ms | 6708 ms| 6673 ms
+6240000581 | 13792 ms | 6959 ms| 6910 ms 
+6480000589 | 14402 ms | 7204 ms |  7210 ms 
+6720000593 | 14867 ms | 7543 ms| 7464 ms
+6960000613 | 15417 ms | 7735 ms | 7757 ms 
+
+| Testes | Algo 1 | Algo 2 | Algo 3 | Algo 4 |
+| :--------------------: | :-----: | :--------: | :-------: | :-------: |
+2400000249 | 5389 ms | 2735 ms | 2651 ms
+2640000259 | 5913 ms |2923 ms |  2978 ms 
+2880000289 | 6391 ms | 3197 ms |3174 ms
+3120000309 | 6930 ms |3518 ms| 3529 ms
+3360000343 | 7448 ms |3724 ms |3731 ms
+3600000355 | 7935 ms |3979 ms|4053 ms 
+3840000381 | 8514 ms | 4303 ms| 4229 ms 
+4080000405 | 9063 ms | 4510 ms | 4501 ms
+4320000439 | 9596 ms |4820 ms | 4827 ms 
+4560000452 | 10099 ms | 5036 ms| 0 ms
+4800000463 | 10605 ms | 5344 ms | 5308 ms
+5040000481 | 11195 ms | 5604 ms | 5604 ms 
+5280000501 | 11695 ms | 5919 ms | 5885 ms
+5520000535 | 12252 ms |  6121 ms|6080 ms 
+5760000565 | 12729 ms | 6418 ms | 6422 ms 
+6000000571 | 13302 ms |6719 ms| 6639 ms
+6240000583 | 13908 ms |  6912 ms |  6921 ms 
+6480000591 | 14360 ms | 7235 ms | 7208 ms
+6720000595 | 14846 ms |7479 ms| 7464 ms 
+6960000615 | 15427 ms | 7707 ms|7688 ms 
