@@ -17,7 +17,7 @@ bool primo(long long n){
         return false;
     }
 
-    for (long long i = 3; i <= (n / 2); ++i){
+    for (long long i = 3; i <= (n / 2); i+=2){
         if (n % i == 0){
             qtd_divs = qtd_divs + 1;
         }

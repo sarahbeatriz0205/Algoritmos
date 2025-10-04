@@ -18,7 +18,7 @@ bool primo(long long n){
     int d = 3;
 
     while (p and d <= (n / 2)){
-        if (n % d == 0){
+        if (n % d){
             p = false;
         }
     d = d + 2;
