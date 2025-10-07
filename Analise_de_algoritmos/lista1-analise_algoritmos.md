@@ -50,7 +50,7 @@ Inicio
     retorne falso
   fim se
 ```
-Equação: 6n + 3 --------> usar na questão 4
+Equação: 6n + 3 
 
 #### Questão 4:
 ~~~c++
