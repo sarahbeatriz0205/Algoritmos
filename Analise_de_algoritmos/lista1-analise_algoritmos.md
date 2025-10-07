@@ -3,9 +3,9 @@
 #### Questão 1:
 a) Levando em consideração os tamanhos de n = 1 até n = 120, conclui-se que de n = 1 até n = 54, a equação A é melhor que a equação B, e a partir de n = 55, a equação B é melhor que a equação A.
 
-b) 
+b) Gráfico
 
-<img src="Captura de tela 2025-10-03 164528-2.png">
+<img src="Captura de tela 2025-10-03 164528.png">
 
 
 #### Questão 2:
@@ -217,6 +217,31 @@ Saída: verdadeiro se n for primo. falso caso contrário.
 9840000869 | 21747 ms | 10902 ms | 10991 ms|
 
 #### Questão 6:
+- Equação Algoritmo 4: ?
+```
+Algoritmo 4
+Entrada: n ∈ N+
+Saída: verdadeiro se n for primo. falso caso contrário.
+    se n = 1 então
+      retorne falso
+    fim se
+    se n = 2 então
+      retorne verdadeiro
+    fim se
+    se n mod 2 = 0 então 
+      retorne falso
+    fim se
+    p ← verdadeiro {Supõe que o n é primo}
+    d ← 3
+    enquanto p and d ≤ n ÷ 2 faça
+      se n mod d então
+         p ← falso
+      fim se
+    d ← d + 2
+    fim enquanto
+retorne p
+```
+
 
 | Testes | Algo 1 | Algo 2 | Algo 3 | Algo 4 |
 | :--------------------: | :-----: | :--------: | :-------: | :-------: |
