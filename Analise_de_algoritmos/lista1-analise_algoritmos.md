@@ -39,7 +39,7 @@ Saída: verdadeiro se n for primo. falso caso contrário.
 
 Inicio
   divs ← 0 --------------------------------> 1
-  para i ← 1 até n faça -------------------> 2n
+  para i ← 1 até n faça -------------------> 2n (ou n vezes)
     se n mod i = 0 então ------------------> 2n
       divs ← divs + 1 ---------------------> 2n (no pior caso)
     fim se
@@ -50,7 +50,7 @@ Inicio
     retorne falso
   fim se
 ```
-Equação: 6n + 3 
+Equação: 6n + 3 ou 5n + 3
 
 #### Questão 4:
 ~~~c++
