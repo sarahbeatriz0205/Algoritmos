@@ -20,24 +20,30 @@ Maior valor: inteiro
 Valor absoluto: inteiro
 
 Início
-Tamanho <- quantidade de elementos do array
-Numeros[tamanho]
-Para i <- 0 até tamanho faça
-      Numeros[i] <- elementos do array
+Tamanho <- quantidade de elementos do array --> 1
+Numeros[tamanho] --> 1
+Para i <- 0 até tamanho faça --> 2n
+      Numeros[i] <- elementos do array --> n
 Fim para
-Maior valor <- Numeros[0] + Numeros[1]
-Para i <- 1 até tamanho-1 faça
-      Valor absoluto <- abs(Numeros[i] - Numeros[i + 1]
-       Se Valor absoluto > Maior valor faça
-                  Maior valor <- Valor absoluto
+Maior valor <- Numeros[0] + Numeros[1] --> 1
+Para i <- 1 até tamanho-1 faça --> n - 1
+      Valor absoluto <- abs(Numeros[i] - Numeros[i + 1] --> n - 1
+       Se Valor absoluto > Maior valor faça --> n
+                  Maior valor <- Valor absoluto --> n
        Fim se
 Fim para
 Fim
 ```
+
+**a) Equação T(n) -> 5n + 3**
+
+**b)**
+
+**c) Implementação em C++**
+
 ~~~c++
-// em C++, com comentários para eu entender o que eu mesma fiz
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib> // biblioteca pra utilizar o abs()
 
 int main(){
     int tamanho;
@@ -61,4 +67,9 @@ int main(){
     return 0;
 }
 ~~~
-a) Equação T(n) -> ?
+
+**d)**
+
+### Questão 4
+
+
