@@ -7,8 +7,16 @@ int main(){
     std::cout << "Defina o tamanho da lista";
     std::cin >> tamanho;
     long long numeros[tamanho];
+    int contador = 1;
 
     for (int i=0; i < tamanho; ++i){
-        std::cin >> numeros[i];
-    
+        std::cin >> numeros[i]; 
+}
+    for (int i=0; i < tamanho-1; ++i){
+        if (numeros[i+1] >= numeros[i]){
+            contador = contador + 1;
+        }
+    }   
+    std::cout << contador << std::endl;
+    return 0;
 }
