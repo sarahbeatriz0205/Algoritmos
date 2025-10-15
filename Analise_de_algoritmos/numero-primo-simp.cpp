@@ -1,14 +1,17 @@
 #include <iostream>
 #include <chrono>
+#include <cmath>
 
 bool primo(long long n){
-    if (n==1){
-        return false;
+    if (n==1){                          // 1
+        return false;                   // 1
     }
-    if (n==2){
+    if (n==2){                          // 1
         return true;
     }
-    for (long long d = 3; d*d<=n; ++d){
+
+    // para fins de utilizar a notação big o, observar quantas vezes ele fará o laço
+    for (long long d = 3; d*d<=n; ++d){ 
         if (n%d == 0){
             return false;
         }

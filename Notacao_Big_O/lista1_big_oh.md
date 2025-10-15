@@ -2,7 +2,9 @@
 ## Aluna: Sarah Beatriz Barbosa do Nascimento
 ### Questão 1
 - A expressão **n^2 + 2^n+2** é **O(2^n)**, pois a taxa de crescimento dessa expressão é **exponencial**.
+- n^2 + 2^n+2 = n^2 + 2^n * 2^2 = n^2 + 2^n (elimino o que cresce menos (n^2)) = 2^n 
 ###  Questão 2
+- Mais rápidas em ordem crescente: **log2n, n, nlog2n, n², n³, 2^n**
 ### Questão 3
 ```
 # Algoritmo
@@ -35,7 +37,7 @@ Fim para
 Fim
 ```
 
-**a) Equação T(n) -> 5n + 3**
+**a) Equação T(n) -> 5n + 3 ---> é O(n)**
 
 **b)**
 
@@ -67,9 +69,84 @@ int main(){
     return 0;
 }
 ~~~
+~~~c++
+// Resolução do professor
+int maior_diferenca(int a[], int n){
+    int mdif = a[1] - a[0]; // 1
+    for (int i=2; i<n; ++i){ // 2(n-2)
+        if (a[i] - a[i-1] < mdif){ // 4(n-2)
+            mdif = a[i] - a[i-1]; // 4(n-2)
+        }
+    }
+    return mdif; // 1
+
+    // 10n - 15 é O(n)
+}
+~~~
 
 **d)**
 
 ### Questão 4
+### Questão 5
+### Questão 6
+a) O(2^n)
 
+b) O(n)
+
+c) O(n^2)
+
+d) O(log2n)
+
+### Questão 7
+- observar a qtd de vezes que ele faz o laço em função da entrada
+~~~c++
+b) int fB(int n){
+int i, a=1;
+for ( i=1 ; i<=n ; i∗=2 ){
+a += i;
+}
+return a;
+}
+// O(log2n)
+~~~
+~~~c++
+c) int fC(int n){
+int i,j,x=1,y;
+for ( i=0 ; i<n ; i++ ){
+y = 2;
+for ( j=1 ; j<=n ; j++ ){
+y+=j;
+}
+x∗=y;
+}
+return x;
+}
+// O(n²)
+~~~
+~~~c++
+d) int fD(int n){
+int i,x=n,y=0;
+for ( i=0 ; i<512 ; i++ ){
+y+=x;
+if ( i%7==0 && i<2∗n )
+x++;
+}
+return y;
+}
+// constante -> 1, pois o laço não será afetado pela entrada
+~~~
+~~~c++
+e) int fE(int n){
+int i,j,x=1,y=0;
+for ( i=n ; i>0 ; i=i/2 ){ // log2n vezes
+y+=x;
+for ( j=0 ; j<n/2 ; j++ ){ // log2n vezes
+if ( n%j==0 )
+y++;
+}
+}
+return y;
+}
+// O(nlog2n)
+~~~
 
