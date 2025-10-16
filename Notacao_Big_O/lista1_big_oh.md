@@ -51,7 +51,7 @@ int main(){
     int tamanho;
     std::cout << "Insira o tamanho do seu array: "; std::cin >> tamanho; // para inserir o tamanho do array
     int numeros[tamanho]; // define o tamanho do array como tamanho
-    for (int i=0; i < tamanho; ++i){
+    for (int i=0; i < tamanho; ++i){ 
         std::cin >> numeros[i]; // para o usuário inserir os valores no array
     }
     
@@ -89,16 +89,33 @@ int maior_diferenca(int a[], int n){
 ### Questão 4
 ### Questão 5
 ### Questão 6
-a) O(2^n)
+a) (2^n/8) + 2n = O(2^n)
 
-b) O(n)
+b) 10n + 50 = O(n) -> constante descartada
 
-c) O(n^2)
+c) 10 + 2n² + n = O(n^2)
 
-d) O(log2n)
+d) 100 + 20log2n = O(log2n) -> 20 é uma constante que não tem influência nesse contexto
+
+e) 50n + 2^n + 200 = O(2^n)
+
+f) 1000 + 3nlog2n + 300n  = O(nlogn)
+
+g) log2n + 5n = O(n) 
+
+h) n² − 400n + 50n³ = O(n^3)
 
 ### Questão 7
 - observar a qtd de vezes que ele faz o laço em função da entrada
+~~~c++
+a) int fA(int n){
+int i,a=1;
+for ( i=0 ; i<n ; i++ ){
+a += i;
+}
+return a;
+}
+~~~
 ~~~c++
 b) int fB(int n){
 int i, a=1;
@@ -112,16 +129,16 @@ return a;
 ~~~c++
 c) int fC(int n){
 int i,j,x=1,y;
-for ( i=0 ; i<n ; i++ ){
+for ( i=0 ; i<n ; i++ ){ // n
 y = 2;
-for ( j=1 ; j<=n ; j++ ){
+for ( j=1 ; j<=n ; j++ ){ // n
 y+=j;
 }
 x∗=y;
 }
 return x;
 }
-// O(n²)
+// n*n = n², ou seja, é O(n²)
 ~~~
 ~~~c++
 d) int fD(int n){
